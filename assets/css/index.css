@@ -10,17 +10,14 @@
 .vector-icon {
     position: absolute;
     top: 1452px;
-    left: 1012px;
-    width: 494px;
-    height: 438px;
+    right: -50px;
+    width: 600px;
+    height: 500px;
     object-fit: contain;
     z-index: -1;
 }
-.vector-icon1,
-.vector-icon2,
-.vector-icon3,
-.vector-icon4,
-.vector-icon5 {
+.vector-icon1 {
+    z-index: -1;
     position: absolute;
     top: 2181px;
     left: -159px;
@@ -28,27 +25,41 @@
     height: 438px;
     object-fit: contain;
 }
-.vector-icon2,
-.vector-icon3,
-.vector-icon4,
-.vector-icon5 {
-    top: 1574px;
-    left: 1083px;
+.vector-icon2 {
+    position: absolute;
+    top: 1600px;
+    right: -50px;
+    width: 494px;
+    height: 438px;
+    object-fit: contain;
+    z-index: -1;
 }
-.vector-icon3,
-.vector-icon4,
-.vector-icon5 {
-    top: 2607px;
-    left: -194px;
+.vector-icon3 {
+    z-index: -1;
+    position: absolute;
+    top: 2500px;
+    left: -159px;
+    width: 494px;
+    height: 438px;
+    object-fit: contain;
 }
-.vector-icon4,
-.vector-icon5 {
-    top: 3397px;
-    left: 1110px;
+.vector-icon4 {
+    z-index: -1;
+    position: absolute;
+    bottom: -100px;
+    right: -159px;
+    width: 494px;
+    height: 438px;
+    object-fit: contain;
 }
 .vector-icon5 {
-    top: 3459px;
-    left: -85px;
+    z-index: -1;
+    position: absolute;
+    bottom: -100px;
+    left: -159px;
+    width: 494px;
+    height: 438px;
+    object-fit: contain;
 }
 .color-blur-icon {
     position: absolute;
@@ -74,7 +85,7 @@
     max-width: 100%;
     max-height: 100%;
     width: 50vw;
-    height: 50vw;
+    height: 40vw;
     border-radius: 0 0 0 80px;
     object-fit: cover;
     z-index: -1;
@@ -475,6 +486,11 @@
     font-weight: 500;
     color: var(--mrt-app-headline);
 }
+
+.search:focus-within, .search-2:focus-within {
+    border: 1px solid var(--neutral-500);
+}
+
 ::-webkit-input-placeholder {
     line-height: 22px;
     font-weight: 500;
@@ -532,6 +548,7 @@
     line-height: 32px;
 }
 .traveloka-logo-2-icon {
+    cursor: pointer;
     flex: 1;
     position: relative;
     max-width: 100%;
@@ -1420,11 +1437,48 @@
     color: var(--mrt-app-headline);
 }
 .brandicofacebook-icon {
+    cursor: pointer;
     width: 32px;
     position: relative;
     height: 32px;
     overflow: hidden;
     flex-shrink: 0;
+}
+.brandicofacebook-icon:hover {
+    filter: brightness(0) saturate(100%) invert(29%) sepia(85%) saturate(1705%) hue-rotate(178deg) brightness(90%)
+        contrast(95%);
+}
+
+.brandicofacebook-icon:hover[src*="brandicofacebook.svg"] {
+    filter: brightness(0) saturate(100%) invert(29%) sepia(85%) saturate(1705%) hue-rotate(178deg) brightness(90%)
+        contrast(95%);
+}
+
+.brandicofacebook-icon:hover[src*="antdesigntwitteroutlined.svg"] {
+    filter: brightness(0) saturate(100%) invert(50%) sepia(69%) saturate(4326%) hue-rotate(174deg) brightness(100%)
+        contrast(98%);
+}
+
+.brandicofacebook-icon:hover[src*="antdesigninstagramfilled.svg"] {
+    filter: brightness(0) saturate(100%) invert(31%) sepia(64%) saturate(2753%) hue-rotate(311deg) brightness(92%)
+        contrast(105%);
+}
+
+/* For SVGs */
+svg:hover path {
+    transition: fill 0.3s ease;
+}
+
+svg:hover path {
+    fill: #34559b; /* Facebook blue */
+}
+
+svg:nth-of-type(2):hover path {
+    fill: #1da1f2; /* Twitter blue */
+}
+
+svg:nth-of-type(3):hover path {
+    fill: #e4405f; /* Instagram pink */
 }
 .brandicofacebook-parent {
     display: flex;
@@ -1441,7 +1495,7 @@
 }
 .property1,
 .article1,
-.contact     {
+.contact {
     width: 14%;
     display: flex;
     flex-direction: column;
@@ -1462,6 +1516,7 @@
 .popular-article,
 .tips-tricks,
 .infohountercom {
+    cursor: pointer;
     text-transform: capitalize;
     font-size: var(--font-size-sm);
 }
@@ -1489,4 +1544,26 @@
     font-size: var(--font-size-sm);
     color: var(--mrt-app-headline);
     font-family: var(--font-lexend);
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+    z-index: 99;
+    display: none;
+    background-color:var(--green-500);
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    padding: 0 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+    font-size: 30px;
+}
+
+#back-to-top:hover {
+    background-color: var(--green-700);
 }

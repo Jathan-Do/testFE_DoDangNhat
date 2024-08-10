@@ -85,3 +85,23 @@ function handleButtonClick(direction) {
     // Gọi hàm changeClass để cập nhật giao diện
     changeClass(null, newCategory);
 }
+
+// Khi người dùng cuộn xuống 1200px từ đỉnh trang, nút sẽ hiện lên
+window.onscroll = function() {
+    scrollFunction();
+};
+
+function scrollFunction() {
+    const backToTopButton = document.getElementById("back-to-top");
+    if (document.body.scrollTop > 1200 || document.documentElement.scrollTop > 1200) {
+        backToTopButton.style.display = "block";
+    } else {
+        backToTopButton.style.display = "none";
+    }
+}
+
+// Khi người dùng nhấp vào nút, trang sẽ cuộn về đầu trang
+document.getElementById("back-to-top").onclick = function() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+};
