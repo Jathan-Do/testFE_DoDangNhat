@@ -593,12 +593,11 @@
     position: relative;
     text-transform: capitalize;
     font-weight: 500;
+    margin-left: 44px;
 }
 .group-inner {
-    margin-left: 12px;
     position: absolute;
     top: 11px;
-    left: -54px;
     background-color: var(--yellow-500);
     width: 32px;
     height: 1px;
@@ -607,7 +606,6 @@
     font-size: var(--font-size-sm);
     color: var(--yellow-500);
     position: relative;
-    margin-left: -168px;
 }
 .our-recommendation-1 {
     position: relative;
@@ -654,7 +652,7 @@
     gap: var(--gap-5xs);
     width: 32%;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 .featured-house-2 {
     display: flex;
@@ -703,12 +701,11 @@
     margin-bottom: 4px;
 }
 .img-item {
-    position: absolute;
-    top: 0;
-    left: 0;
     border-radius: var(--br-5xl);
-    width: 340px;
+    width: 100%;
+    max-width: 100%;
     height: 382px;
+    overflow: hidden;
     object-fit: cover;
 }
 .ant-designfire-filled-icon {
@@ -802,7 +799,6 @@
     flex-direction: column;
     font-size: var(--font-size-lg);
 }
-.img-parent,
 .nama-pekerjaan-wrapper,
 .phhouse-fill-group {
     display: flex;
@@ -810,10 +806,14 @@
     justify-content: flex-start;
 }
 .img-parent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: var(--br-11xs);
     overflow: hidden;
     flex-direction: column;
     gap: var(--gap-5xl);
+    max-width: 100%;
 }
 .phhouse-fill-group {
     position: absolute;
@@ -862,6 +862,7 @@
     color: var(--green-700);
 }
 .house1 {
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -869,6 +870,7 @@
     gap: 40px;
     font-size: var(--font-size-sm);
     color: var(--neutral-900);
+    flex-wrap: wrap;
 }
 .search-button1,
 .search-button2 {
@@ -917,11 +919,15 @@
     height: 28vw;
     cursor: pointer;
 }
-.lets-tour-and {
+.lets-tour-and,
+.lets-tour-and-1 {
     text-transform: capitalize;
     font-weight: 600;
     font-family: var(--font-lexend);
     color: var(--mrt-app-headline);
+}
+.lets-tour-and-1 {
+    margin-left: 44px;
 }
 .ready-to-sell-parent {
     width: 100%;
@@ -963,7 +969,7 @@
     display: flex;
 }
 .bedrooms {
-    flex: 1;
+    width: 50%;
     align-items: center;
     gap: var(--gap-base);
 }
@@ -993,7 +999,7 @@
 }
 .info-child,
 .title-house-detail {
-    padding-left: 52px;
+    padding-left: 47px;
     width: 100%;
 }
 .info-child {
@@ -1003,13 +1009,10 @@
     margin: 16px 0 24px 0;
 }
 .ellipse-icon {
-    position: absolute;
-    top: -23px;
-    left: 20px;
     border-radius: 50%;
     object-fit: cover;
-    width: 120px;
-    height: 120px;
+    width: 60px;
+    height: 60px;
 }
 .dianne-russell1,
 .manager-director {
@@ -1027,9 +1030,13 @@
     align-items: flex-start;
     justify-content: flex-start;
     gap: var(--gap-9xs);
+    text-align: start;
 }
 .ellipse-parent {
-    padding-left: 126px;
+    align-items: center;
+    gap: 14px;
+    display: flex;
+    padding-left: 43px;
     width: 36%;
     height: 56px;
 }
@@ -1206,7 +1213,7 @@
 .group-child1 {
     background-color: var(--yellow-500);
     width: 32px;
-    height: 1px;
+    height: 2px;
     margin: auto;
 }
 .see-tips-and-trick-from-our-pa-parent {
@@ -1580,9 +1587,47 @@ svg:nth-of-type(3):hover path {
     .frame-parent {
         display: none;
     }
-    .title-search{
-        width: 93%;
-        margin: 50px 20px 0px 20px;
+    .title-search {
+        width: 80%;
+        margin: 50px 66px 0px 66px;
+    }
+    .logo {
+        padding-left: 0px;
+    }
+    .traveloka-logo-2-parent {
+        margin: auto;
+    }
+    .header-section-2 {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .arrow {
+        display: none;
+    }
+    .group-inner {
+        background-color: var(--yellow-500);
+        width: 32px;
+        height: 1px;
+        margin: auto;
+        position: unset;
+        top: 0;
+    }
+    .featured-house {
+        width: 100%;
+        margin: auto;
+        align-items: unset;
+        margin-bottom: 12px;
+    }
+    .our-recommendation {
+        text-align: center;
+    }
+    .our-recommendation,
+    .lets-tour-and-1 {
+        margin: auto;
+    }
+    .section-2 {
+        margin-top: -110px;
     }
 }
 
@@ -1610,21 +1655,192 @@ svg:nth-of-type(3):hover path {
     .frame-parent {
         display: none;
     }
+    .logo {
+        padding-left: 10px;
+    }
+    .header-section-2 {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .arrow {
+        display: none;
+    }
+    .group-inner-1,
+    .group-inner {
+        background-color: var(--yellow-500);
+        width: 32px;
+        height: 1px;
+        margin: auto;
+        position: unset;
+        top: 0;
+    }
+    .group-inner-1 {
+        height: 2px;
+        margin-bottom: 4px;
+    }
+    .featured-house {
+        width: 100%;
+        margin: auto;
+        align-items: unset;
+        margin-bottom: 12px;
+    }
+    .our-recommendation {
+        text-align: center;
+    }
+    .our-recommendation,
+    .lets-tour-and-1 {
+        margin: auto;
+    }
+    .section-2 {
+        margin-top: -110px;
+    }
+    .contact-info,
+    .section-3 {
+        flex-direction: column;
+    }
+    .title-house-detail {
+        padding-left: 0;
+    }
+    .featured-house-2 {
+        align-items: center;
+        text-align: center;
+    }
+    .houses-recommended-by {
+        width: 100%;
+    }
+    .house-detail {
+        text-align: center;
+    }
+    .row-1,
+    .row-2 {
+        width: 100%;
+        margin: auto;
+    }
+    .bedrooms1 {
+        flex: unset;
+    }
+    .row-1 > .bedrooms:nth-child(1),
+    .row-2 > .bedrooms:first-child {
+        justify-content: flex-end;
+    }
+    .bedrooms {
+        width: 100%;
+    }
+    .contact-info{
+        width: 100%;
+        gap: 8px;
+    }
+    .ellipse-parent{
+        width: 100%;
+        justify-content: center;
+        padding-left: 0;
+    }
+    .nama-pekerjaan3{
+        align-items: flex-start;
+    }
+    .contact-now{
+        margin-left: 0;
+    }
+    .ellipse-icon{
+        position: unset;
+    }
+    .info-child{
+        width: 100%;
+    }
+    .img-icon{
+        width: 100%;
+    }
 }
 
 /* Medium devices (landscape tablets, 900px - 1200px) */
-@media only screen and (min-width: 992px) and (max-width: 1400px) {
+@media only screen and (min-width: 991px) and (max-width: 1200px) {
     .k-peoples-parent {
         display: none;
     }
-    #navbarOffcanvas{
+    #navbarOffcanvas {
         display: none;
+    }
+    .header-section-2 {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .header-section-2 > :nth-child(1) {
+        align-items: flex-start;
+        width: 100%;
+    }
+    .category {
+        align-items: center;
+        justify-content: center;
+    }
+    .arrow {
+        display: none;
+    }
+    .our-recommendation-parent {
+        margin-left: 0;
+    }
+    .row-1,
+    .row-2 {
+        width: 98%;
+    }
+    .info-child {
+        width: 100%;
+    }
+    .houses-recommended-by {
+        width: 100%;
+    }
+    .contact-info {
+        width: 180%;
     }
 }
 
+@media only screen and (min-width: 1200px) and (max-width: 1400px) {
+    .k-peoples-parent {
+        display: none;
+    }
+    #navbarOffcanvas {
+        display: none;
+    }
+    .header-section-2 {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .header-section-2 > :nth-child(1) {
+        align-items: flex-start;
+        width: 100%;
+    }
+    .category {
+        align-items: center;
+        justify-content: center;
+    }
+    .arrow {
+        display: none;
+    }
+    .our-recommendation-parent {
+        margin-left: 0;
+    }
+    .ellipse-parent {
+        width: 50%;
+    }
+    .row-1,
+    .row-2 {
+        width: 70%;
+    }
+    .info-child {
+        width: 80%;
+    }
+    .houses-recommended-by {
+        width: 90%;
+    }
+}
 /* Large devices (laptops/desktops, 1200px and up) */
 @media only screen and (min-width: 1401px) {
-    #navbarOffcanvas{
+    #navbarOffcanvas {
         display: none;
+    }
+    .k-peoples-parent {
+        top: 530px;
     }
 }
