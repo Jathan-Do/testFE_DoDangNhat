@@ -95,8 +95,8 @@
 }
 .k-peoples-child-3 {
     position: absolute;
-    top: -63px;
-    left: 24px;
+    top: -38px;
+    left: 60px;
 }
 .k-people {
     align-self: stretch;
@@ -379,6 +379,7 @@
 }
 .find-the-place-container {
     display: inline-block;
+    text-shadow: 1px 0 0#1b1c57, 0 1px 0#1b1c57, -1px 0 0#1b1c57, 0-1px 0#1b1c57;
 }
 .text-stroke {
     color: var(--color-white);
@@ -488,7 +489,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
 }
 .search-button,
 .search-button-2 {
@@ -499,9 +500,11 @@
     color: var(--color-white);
 }
 .search-button-2 {
-    width: 40%;
+    width: 50%;
     height: 46px;
 }
+.contact-now2:hover,
+.search-button-2:hover,
 .search-button:hover {
     background-color: var(--green-700);
 }
@@ -976,7 +979,7 @@
 }
 .info-child {
     background-color: var(--neutral-100);
-    width: 50%;
+    width: 70%;
     height: 2px;
     margin: 16px 0 24px 0;
 }
@@ -1026,6 +1029,7 @@
     gap: var(--gap-base);
     font-size: var(--font-size-sm);
     color: var(--color-white);
+    margin-left: 26px;
 }
 .contact-info {
     display: flex;
@@ -1203,6 +1207,7 @@
     font-size: var(--font-size-sm);
     color: var(--color-white);
     width: 118px;
+    cursor: pointer;
     margin: 24px auto 40px;
 }
 .title1 {
@@ -1347,17 +1352,34 @@
     display: flex;
     gap: 79px;
 }
-.subscribe-row-2{
+.subscribe-row-2 {
     align-items: flex-start;
 }
+.subscribe-row-3,
+.subscribe-row-5 {
+    align-self: start;
+    padding-left: 100px;
+}
+.subscribe-row-5 {
+    padding-left: 130px;
+}
+.subscribe-row-4,
+.subscribe-row-6 {
+    align-self: end;
+    padding-right: 100px;
+}
+.subscribe-row-4,
+.subscribe-row-5 {
+    display: flex;
+    justify-content: flex-start;
+}
 .we-provide-information {
-    position: absolute;
-    top: 52px;
-    left: 0;
+    font-size: 14px;
     line-height: 24px;
     display: inline-block;
-    width: 320px;
+    width: 50%;
     opacity: 0.75;
+    padding-bottom: 16px;
 }
 .logo-child1,
 .logo-inner {
@@ -1388,11 +1410,11 @@
     text-transform: capitalize;
     font-family: var(--font-lexend);
 }
+.logo-cover {
+    position: relative;
+    width: 100%;
+}
 .logo2 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 115px;
     height: 36px;
     font-size: var(--font-size-base);
     color: var(--mrt-app-headline);
@@ -1405,87 +1427,57 @@
     flex-shrink: 0;
 }
 .brandicofacebook-parent {
-    position: absolute;
-    top: 148px;
-    left: 0;
     display: flex;
-    flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
     gap: var(--gap-5xl);
 }
 .bio {
-    left: 0;
-    width: 320px;
-    height: 180px;
+    width: 50%;
     color: var(--mrt-app-neutral-01);
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-base);
 }
-.bio,
 .property1,
-.property2 {
-    position: absolute;
-    top: 0;
+.article1,
+.contact     {
+    width: 14%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
 }
 .property2 {
-    left: 0;
     font-size: var(--font-size-lg);
     text-transform: capitalize;
     font-weight: 600;
     color: var(--neutral-900);
+    padding-bottom: 4px;
 }
-.property1 {
-    left: 583px;
-    width: 79px;
-    height: 137px;
+.contact {
+    width: 22%;
 }
 .most-read,
 .new-article,
 .popular-article,
-.tips-tricks {
-    position: absolute;
-    top: 47px;
-    left: 0;
-    text-transform: capitalize;
-}
-.most-read,
-.popular-article,
-.tips-tricks {
-    top: 83px;
-}
-.most-read,
-.tips-tricks {
-    top: 155px;
-}
-.most-read {
-    top: 119px;
-}
-.article1 {
-    position: absolute;
-    top: 0;
-    left: 750px;
-    width: 97px;
-    height: 173px;
-}
-.contact,
-.footer,
+.tips-tricks,
 .infohountercom {
-    position: absolute;
-    top: 119px;
-    left: 0;
+    text-transform: capitalize;
+    font-size: var(--font-size-sm);
 }
-.contact,
+
 .footer {
-    top: 0;
-    left: 935px;
-    width: 265px;
-    height: 137px;
-}
-.footer {
-    top: 3524px;
-    left: 140px;
-    width: 1200px;
-    height: 180px;
+    font-family: var(--font-lexend);
+    border-radius: var(--br-13xl);
+    overflow: hidden;
     color: var(--neutral-500);
+    width: 100%;
+    font-size: var(--font-size-13xl);
+    margin-top: 120px;
+    padding: 0 122px 0;
+    position: relative;
+    display: flex;
+    height: 240px;
 }
 .template-1 {
     width: 100%;
