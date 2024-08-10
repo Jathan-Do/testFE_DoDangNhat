@@ -160,7 +160,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="navbar-login px-5 py-5">
+                <div class="navbar-login px-5 py-5 navbar navbar-expand-lg">
                     <div class="logo">
                         <div class="logo1">
                             <img class="" alt="" src="./assets/images/logo.svg" />
@@ -199,6 +199,64 @@
                         </div>
                         <div class="sign-up-wrapper">
                             <div class="sign-up">Sign Up!</div>
+                        </div>
+                    </div>
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#navbarOffcanvas"
+                        aria-controls="navbarOffcanvas"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div
+                        class="offcanvas offcanvas-end"
+                        tabindex="-1"
+                        id="navbarOffcanvas"
+                        aria-labelledby="navbarOffcanvasLabel"
+                    >
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="navbarOffcanvasLabel">Menu</h5>
+                            <button
+                                type="button"
+                                class="btn-close text-reset"
+                                data-bs-dismiss="offcanvas"
+                                aria-label="Close"
+                            ></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                                <li class="nav-item about-us-wrapper">
+                                    <a class="nav-link about-us" href="#about">About Us</a>
+                                </li>
+                                <li class="nav-item about-us-wrapper">
+                                    <a class="nav-link" href="#article">Article</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a
+                                        class="nav-link dropdown-toggle property-parent about-us p-3"
+                                        href="#"
+                                        id="navbarDropdown"
+                                        role="button"
+                                        data-bs-toggle="dropdown"
+                                        aria-expanded="false"
+                                    >
+                                        Property
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item" href="#page1">Page 1</a></li>
+                                        <li><a class="dropdown-item" href="#page2">Page 2</a></li>
+                                        <li><hr class="dropdown-divider" /></li>
+                                        <li><a class="dropdown-item" href="#page3">Page 3</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <button class="sign-up-wrapper m-0 border-0">
+                                <div class="sign-up">Sign Up!</div>
+                            </button>
                         </div>
                     </div>
                 </div>
