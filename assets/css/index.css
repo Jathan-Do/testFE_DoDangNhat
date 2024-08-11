@@ -827,6 +827,9 @@
     gap: var(--gap-3xs);
     animation: flameMovement 1.5s ease-in-out infinite;
 }
+.ant-designfire-filled-parent:hover {
+    background-color: #fcd5d5;
+}
 #img1 {
     cursor: pointer;
     width: 340px;
@@ -920,6 +923,9 @@
     gap: var(--gap-3xs);
     animation: flameMovement-1 1.5s ease-in-out infinite;
 }
+.phhouse-fill-group:hover{
+    background-color: #c7ddfa;
+}
 #img2 {
     cursor: pointer;
     width: 340px;
@@ -949,6 +955,9 @@
     padding: var(--padding-5xs) var(--padding-base);
     gap: var(--gap-3xs);
     animation: flameMovement 1.5s ease-in-out infinite;
+}
+.entypowallet-parent:hover{
+    background-color: #bffadb;
 }
 #img3 {
     cursor: pointer;
