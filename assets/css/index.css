@@ -7,6 +7,17 @@
     height: 699px;
     display: block;
 }
+.text-main-color {
+    color: var(--green-700);
+}
+.signup {
+    background-color: var(--green-100);
+    color: var(--green-700);
+}
+.signup:hover {
+    background-color: var(--green-500);
+    color: var(--color-white);
+}
 .vector-icon {
     position: absolute;
     top: 1452px;
@@ -394,6 +405,19 @@
 }
 .text-stroke {
     color: var(--color-white);
+    animation: strokeEffect 3s ease-in-out infinite alternate;
+}
+
+@keyframes strokeEffect {
+    0% {
+        color: var(--mrt-app-headline);
+    }
+    50% {
+        color: var(--color-white);
+    }
+    100% {
+        color: var(--mrt-app-headline);
+    }
 }
 .everything-you-need {
     width: 94%;
@@ -421,6 +445,39 @@
     -webkit-animation: shake-horizontal 0.8s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
     animation: shake-horizontal 0.8s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
 }
+.contact-now-animate {
+    -webkit-animation: pulsate-fwd 0.5s ease-in-out infinite both;
+    animation: pulsate-fwd 0.5s ease-in-out infinite both;
+}
+@-webkit-keyframes pulsate-fwd {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    50% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+@keyframes pulsate-fwd {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    50% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
 @-webkit-keyframes shake-horizontal {
     0%,
     100% {
@@ -558,6 +615,7 @@
     object-fit: cover;
 }
 .traveloka-logo-2-parent {
+    height: fit-content;
     width: 88%;
     display: flex;
     flex-direction: row;
@@ -708,10 +766,45 @@
     overflow: hidden;
     object-fit: cover;
 }
+
+@keyframes flameMovement {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes flameMovement-1 {
+    0% {
+        transform: translateY(-5px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-5px);
+    }
+}
+@keyframes flameMovement-2 {
+    0% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-5px);
+    }
+}
+
 .ant-designfire-filled-icon {
     width: 16px;
-    position: relative;
     height: 16px;
+    position: relative;
     overflow: hidden;
     flex-shrink: 0;
 }
@@ -728,10 +821,11 @@
     background-color: var(--red-100);
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     justify-content: flex-start;
     padding: var(--padding-5xs) var(--padding-base);
     gap: var(--gap-3xs);
+    animation: flameMovement 1.5s ease-in-out infinite;
 }
 #img1 {
     cursor: pointer;
@@ -802,7 +896,7 @@
 .nama-pekerjaan-wrapper,
 .phhouse-fill-group {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: flex-start;
 }
 .img-parent {
@@ -824,6 +918,7 @@
     flex-direction: row;
     padding: var(--padding-5xs) var(--padding-base);
     gap: var(--gap-3xs);
+    animation: flameMovement-1 1.5s ease-in-out infinite;
 }
 #img2 {
     cursor: pointer;
@@ -850,9 +945,10 @@
     left: 16px;
     border-radius: var(--br-13xl);
     background-color: var(--green-100);
-    align-items: flex-start;
+    align-items: center;
     padding: var(--padding-5xs) var(--padding-base);
     gap: var(--gap-3xs);
+    animation: flameMovement 1.5s ease-in-out infinite;
 }
 #img3 {
     cursor: pointer;
@@ -1149,12 +1245,8 @@
 .rectangle-container,
 .rectangle-group {
     display: flex;
-    flex-direction: row;
     justify-content: flex-start;
     gap: var(--gap-13xl);
-}
-.rectangle-container {
-    top: 376px;
 }
 .col1 {
     width: 50%;
@@ -1256,6 +1348,18 @@
     width: 100%;
     display: flex;
     gap: 68px;
+}
+.subscribe-child3 {
+    animation: flameMovement-1 1.5s ease-in-out infinite;
+}
+.subscribe-child4 {
+    animation: flameMovement-1 1.5s ease-in-out infinite;
+}
+.subscribe-inner {
+    animation: flameMovement 1.5s ease-in-out infinite;
+}
+.subscribe-item {
+    animation: flameMovement 1.5s ease-in-out infinite;
 }
 .subscribe-child1,
 .subscribe-child2,
@@ -1385,6 +1489,7 @@
 .subscribe-row-5 {
     align-self: start;
     padding-left: 100px;
+    animation: flameMovement-1 1.5s ease-in-out infinite;
 }
 .subscribe-row-5 {
     padding-left: 130px;
@@ -1393,11 +1498,13 @@
 .subscribe-row-6 {
     align-self: end;
     padding-right: 100px;
+    animation: flameMovement-1 1.5s ease-in-out infinite;
 }
 .subscribe-row-4,
 .subscribe-row-5 {
     display: flex;
     justify-content: flex-start;
+    animation: flameMovement 1.5s ease-in-out infinite;
 }
 .we-provide-information {
     font-size: 14px;
@@ -1502,10 +1609,15 @@ svg:nth-of-type(3):hover path {
     flex-direction: column;
     gap: var(--gap-base);
 }
+.component {
+    width: 50%;
+    display: flex;
+    gap: var(--gap-base);
+}
 .property1,
 .article1,
 .contact {
-    width: 14%;
+    width: 26%;
     display: flex;
     flex-direction: column;
     gap: 18px;
@@ -1518,7 +1630,7 @@ svg:nth-of-type(3):hover path {
     padding-bottom: 4px;
 }
 .contact {
-    width: 22%;
+    width: 48%;
 }
 .most-read,
 .new-article,
@@ -1529,7 +1641,13 @@ svg:nth-of-type(3):hover path {
     text-transform: capitalize;
     font-size: var(--font-size-sm);
 }
-
+.most-read:hover,
+.new-article:hover,
+.popular-article:hover,
+.tips-tricks:hover,
+.infohountercom:hover {
+    color: rgb(90, 90, 90);
+}
 .footer {
     font-family: var(--font-lexend);
     border-radius: var(--br-13xl);
@@ -1541,7 +1659,7 @@ svg:nth-of-type(3):hover path {
     padding: 0 122px 0;
     position: relative;
     display: flex;
-    height: 240px;
+    height: 270px;
 }
 .template-1 {
     width: 100%;
@@ -1577,6 +1695,9 @@ svg:nth-of-type(3):hover path {
     background-color: var(--green-700);
 }
 
+.modal {
+    z-index: 9999;
+}
 /* Add media queries for different screen sizes */
 
 /* Extra small devices (phones, 600px and down) */
@@ -1605,13 +1726,18 @@ svg:nth-of-type(3):hover path {
     .arrow {
         display: none;
     }
-    .group-inner {
+    .group-inner,
+    .group-inner-1 {
         background-color: var(--yellow-500);
         width: 32px;
         height: 1px;
         margin: auto;
         position: unset;
         top: 0;
+    }
+    .group-inner-1 {
+        height: 2px;
+        margin-bottom: 4px;
     }
     .featured-house {
         width: 100%;
@@ -1627,7 +1753,109 @@ svg:nth-of-type(3):hover path {
         margin: auto;
     }
     .section-2 {
-        margin-top: -110px;
+        margin-top: -50px;
+    }
+    .contact-info,
+    .section-3 {
+        flex-direction: column;
+    }
+    .title-house-detail {
+        padding-left: 0;
+    }
+    .featured-house-2 {
+        align-items: center;
+        text-align: center;
+    }
+    .houses-recommended-by {
+        width: 100%;
+    }
+    .house-detail {
+        text-align: center;
+    }
+    .row-1,
+    .row-2 {
+        width: 100%;
+        margin: auto;
+    }
+    .bedrooms1 {
+        flex: unset;
+    }
+    .row-1 > .bedrooms:nth-child(1),
+    .row-2 > .bedrooms:first-child {
+        justify-content: flex-end;
+    }
+    .bedrooms {
+        width: 100%;
+    }
+    .contact-info {
+        width: 100%;
+        gap: 8px;
+    }
+    .ellipse-parent {
+        width: 100%;
+        justify-content: center;
+        padding-left: 0;
+    }
+    .nama-pekerjaan3 {
+        align-items: flex-start;
+    }
+    .contact-now {
+        margin-left: 0;
+        margin-top: 24px;
+    }
+    .ellipse-icon {
+        position: unset;
+    }
+    .info-child {
+        width: 100%;
+    }
+    .img-icon {
+        width: 100%;
+    }
+    .subscribe,
+    .section-5,
+    .section-3 {
+        padding: 0 62px 0;
+        margin-top: 40px;
+    }
+    .section-5-body {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .col1,
+    .col2 {
+        width: 100%;
+    }
+    .subscribe-row-2,
+    .subscribe-row-1 {
+        gap: 5px;
+    }
+    .subscribe-row-3 {
+        padding-left: 65px;
+    }
+    .subscribe-row-6,
+    .subscribe-row-4 {
+        padding-right: 80px;
+    }
+    .subscribe-row-5 {
+        padding-left: 100px;
+    }
+    .sign-up {
+        text-align: center;
+    }
+    .footer {
+        padding: 0 62px 0;
+        flex-direction: column;
+        height: 60vh;
+    }
+    .we-provide-information,
+    .bio,
+    .component {
+        width: 100%;
+    }
+    .component {
+        margin-top: 20px;
     }
 }
 
@@ -1727,35 +1955,82 @@ svg:nth-of-type(3):hover path {
     .bedrooms {
         width: 100%;
     }
-    .contact-info{
+    .contact-info {
         width: 100%;
         gap: 8px;
     }
-    .ellipse-parent{
+    .ellipse-parent {
         width: 100%;
         justify-content: center;
         padding-left: 0;
     }
-    .nama-pekerjaan3{
+    .nama-pekerjaan3 {
         align-items: flex-start;
     }
-    .contact-now{
+    .contact-now {
         margin-left: 0;
+        margin-top: 24px;
     }
-    .ellipse-icon{
+    .ellipse-icon {
         position: unset;
     }
-    .info-child{
+    .info-child {
         width: 100%;
     }
-    .img-icon{
+    .img-icon {
         width: 100%;
+    }
+    .subscribe,
+    .section-5,
+    .section-3 {
+        padding: 0 62px 0;
+        margin-top: 40px;
+    }
+    .section-5-body {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .col1,
+    .col2 {
+        width: 100%;
+    }
+    .subscribe-row-2,
+    .subscribe-row-1 {
+        gap: 5px;
+    }
+    .subscribe-row-3 {
+        padding-left: 65px;
+    }
+    .subscribe-row-6,
+    .subscribe-row-4 {
+        padding-right: 80px;
+    }
+    .subscribe-row-5 {
+        padding-left: 100px;
+    }
+    .sign-up {
+        text-align: center;
+    }
+    .footer {
+        padding: 0 62px 0;
+        flex-direction: column;
+        height: 60vh;
+    }
+    .we-provide-information,
+    .bio,
+    .component {
+        width: 100%;
+    }
+    .component {
+        margin-top: 20px;
     }
 }
 
 /* Medium devices (landscape tablets, 900px - 1200px) */
 @media only screen and (min-width: 991px) and (max-width: 1200px) {
-    .k-peoples-parent {
+    .k-peoples-parent,
+    .img-child {
         display: none;
     }
     #navbarOffcanvas {
@@ -1793,10 +2068,23 @@ svg:nth-of-type(3):hover path {
     .contact-info {
         width: 180%;
     }
+    .section-5-body {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .col1,
+    .col2 {
+        width: 100%;
+    }
+    .search-button-2 {
+        width: 112%;
+    }
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1400px) {
-    .k-peoples-parent {
+    .k-peoples-parent,
+    .img-child {
         display: none;
     }
     #navbarOffcanvas {
@@ -1834,13 +2122,64 @@ svg:nth-of-type(3):hover path {
     .houses-recommended-by {
         width: 90%;
     }
+    .search-button-2 {
+        width: 62%;
+    }
+    .section-2 {
+        margin-top: 40px;
+    }
 }
 /* Large devices (laptops/desktops, 1200px and up) */
-@media only screen and (min-width: 1401px) {
+@media only screen and (min-width: 1401px) and (max-width: 1984px) and (max-height: 1024px) {
+    #navbarOffcanvas {
+        display: none;
+    }
+    .k-peoples-parent {
+        top: 750px;
+    }
+    .section-2 {
+        margin-top: 300px;
+    }
+}
+@media only screen and (min-width: 1401px) and (max-width: 1984px) and (max-height: 800px) {
+    #navbarOffcanvas {
+        display: none;
+    }
+    .k-peoples-parent {
+        top: 600px;
+    }
+    .section-2 {
+        margin-top: 120px;
+    }
+}
+@media only screen and (min-width: 1401px) and (max-width: 1984px) and (max-height: 700px) {
     #navbarOffcanvas {
         display: none;
     }
     .k-peoples-parent {
         top: 530px;
+    }
+    .section-2 {
+        margin-top: 40px;
+    }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1400px) and (max-height: 1024px) {
+    .section-2 {
+        margin-top: 300px;
+    }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1400px) and (max-height: 800px) {
+    .section-2 {
+        margin-top: 80px;
+    }
+}
+@media only screen and (min-width: 991px) and (max-width: 1200px) and (max-height: 1024px) {
+    .section-2 {
+        margin-top: 300px;
+    }
+}
+@media only screen and (min-width: 991px) and (max-width: 1200px) and (max-height: 800px) {
+    .section-2 {
+        margin-top: 80px;
     }
 }

@@ -191,13 +191,13 @@
                             </button>
 
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="./test2.html">Page 1</a></li>
+                                <li><a class="dropdown-item" href="#">Page 1</a></li>
                                 <li><a class="dropdown-item" href="#">Page 2</a></li>
                                 <li><hr class="dropdown-divider" /></li>
                                 <li><a class="dropdown-item" href="#">Page 3</a></li>
                             </ul>
                         </div>
-                        <div class="sign-up-wrapper">
+                        <div class="sign-up-wrapper" data-bs-toggle="modal" href="#signInForm" role="button">
                             <div class="sign-up">Sign Up!</div>
                         </div>
                     </div>
@@ -254,7 +254,12 @@
                                     </ul>
                                 </li>
                             </ul>
-                            <button class="sign-up-wrapper m-0 border-0">
+                            <button
+                                class="sign-up-wrapper m-0 border-0"
+                                data-bs-toggle="modal"
+                                href="#signInForm"
+                                role="button"
+                            >
                                 <div class="sign-up">Sign Up!</div>
                             </button>
                         </div>
@@ -503,7 +508,7 @@
                         </div>
                         <div class="contact-now">
                             <img
-                                class="fluentlocation-16-filled-icon"
+                                class="fluentlocation-16-filled-icon contact-now-animate"
                                 alt=""
                                 src="./assets/images/fluentcall20filled.svg"
                             />
@@ -703,27 +708,185 @@
                         <img class="brandicofacebook-icon" alt="" src="./assets/images/antdesigninstagramfilled.svg" />
                     </div>
                 </div>
-                <div class="property1">
-                    <div class="property2">Property</div>
-                    <div class="new-article">House</div>
-                    <div class="popular-article">Apartment</div>
-                    <div class="most-read">Villa</div>
-                </div>
-                <div class="article1">
-                    <div class="property2">Article</div>
-                    <div class="new-article">New Article</div>
-                    <div class="popular-article">Popular Article</div>
-                    <div class="most-read">Most Read</div>
-                    <div class="tips-tricks">Tips & Tricks</div>
-                </div>
-                <div class="contact">
-                    <div class="property2">Contact</div>
-                    <div class="new-article">2464 Royal Ln. Mesa, New Jersey 45463</div>
-                    <div class="popular-article">(671) 555-0110</div>
-                    <div class="infohountercom">info@hounter.com</div>
+                <div class="component">
+                    <div class="property1">
+                        <div class="property2">Property</div>
+                        <div class="new-article">House</div>
+                        <div class="popular-article">Apartment</div>
+                        <div class="most-read">Villa</div>
+                    </div>
+                    <div class="article1">
+                        <div class="property2">Article</div>
+                        <div class="new-article">New Article</div>
+                        <div class="popular-article">Popular Article</div>
+                        <div class="most-read">Most Read</div>
+                        <div class="tips-tricks">Tips & Tricks</div>
+                    </div>
+                    <div class="contact">
+                        <div class="property2">Contact</div>
+                        <div class="new-article">2464 Royal Ln. Mesa, New Jersey 45463</div>
+                        <div class="popular-article">(671) 555-0110</div>
+                        <div class="infohountercom">info@hounter.com</div>
+                    </div>
                 </div>
             </div>
             <button id="back-to-top" title="Go to top">↑</button>
+            <!-- Login form -->
+            <div
+                class="modal fade"
+                id="signInForm"
+                aria-hidden="true"
+                aria-labelledby="exampleModalToggleLabel"
+                tabindex="-1"
+            >
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-4" id="exampleModalToggleLabel">Log in to your account</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <div class="form-floating mb-3">
+                                        <input
+                                            type="email"
+                                            id="email"
+                                            class="form-control"
+                                            required
+                                            placeholder="name@example.com"
+                                        />
+                                        <label>Email</label>
+                                    </div>
+                                    <div id="emailHelp" class="form-text">
+                                        We will never share your email with anyone else.
+                                    </div>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input
+                                        type="password"
+                                        id="password"
+                                        class="form-control"
+                                        required
+                                        placeholder="Password"
+                                    />
+                                    <label>Password</label>
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" />
+                                    <label class="form-check-label">Remember account</label>
+                                </div>
+                                <button id="loginbutton" class="signup border-0 fs-4 fw-bold w-100 text-center py-2 rounded">
+                                    Sign In
+                                </button>
+                                <span>
+                                    <p class="my-3">
+                                        No account ?
+                                        <a
+                                            data-bs-toggle="modal"
+                                            class="text-main-color text-decoration-none"
+                                            href="#signUpForm"
+                                            role="button"
+                                            >Sign Up</a
+                                        >
+                                    </p>
+                                </span>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sign up form -->
+            <div
+                class="modal fade"
+                id="signUpForm"
+                aria-hidden="true"
+                aria-labelledby="exampleModalToggleLabel2"
+                tabindex="-1"
+            >
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Create an account</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <div class="form-floating mb-3">
+                                        <input
+                                            type="text"
+                                            name="name"
+                                            id="nameUser"
+                                            class="form-control"
+                                            required
+                                            placeholder="Họ và tên"
+                                        />
+                                        <label>Full name</label>
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                        <input
+                                            type="email"
+                                            name="email"
+                                            class="form-control"
+                                            required
+                                            id="emailSignup"
+                                            placeholder="name@example.com"
+                                        />
+                                        <label for="floatingInput">Email</label>
+                                    </div>
+                                    <div id="emailHelp" class="form-text">
+                                        We will never share your email with anyone else.
+                                    </div>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input
+                                        type="password"
+                                        name="password"
+                                        id="passwordSignup"
+                                        class="form-control"
+                                        required
+                                        placeholder="Password"
+                                    />
+                                    <label>Password</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input
+                                        type="password"
+                                        id="repasswordSignup"
+                                        class="form-control"
+                                        placeholder="Password"
+                                    />
+                                    <label>Re-enter the password</label>
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" />
+                                    <label class="form-check-label">Remember account</label>
+                                </div>
+                                <button
+                                    id="signupbutton"
+                                    class="border-0 fs-4 fw-bold w-100 text-center py-2 rounded signup"
+                                >
+                                    Continue
+                                </button>
+                                <span>
+                                    <p class="my-3">
+                                        Already have an account ?
+                                        <a
+                                            data-bs-toggle="modal"
+                                            class="text-main-color text-decoration-none"
+                                            href="#signInForm"
+                                            role="button"
+                                            >Sign In</a
+                                        >
+                                    </p>
+                                </span>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </body>
     <script src="./assets/js/main.js"></script>
