@@ -1707,9 +1707,7 @@ svg:nth-of-type(3):hover path {
 .modal {
     z-index: 9999;
 }
-/* Add media queries for different screen sizes */
 
-/* Extra small devices (phones, 600px and down) */
 @media only screen and (min-width: 340px) and (max-width: 600px) {
     .section1__image-cover {
         display: none;
@@ -1901,8 +1899,6 @@ svg:nth-of-type(3):hover path {
         align-items: center;
     }
 }
-
-/* Small devices (portrait tablets and large phones, 600px - 900px) */
 @media only screen and (min-width: 601px) and (max-width: 991px) {
     .k-peoples-parent {
         display: none;
@@ -2070,8 +2066,6 @@ svg:nth-of-type(3):hover path {
         margin-top: 20px;
     }
 }
-
-/* Medium devices (landscape tablets, 900px - 1200px) */
 @media only screen and (min-width: 991px) and (max-width: 1200px) {
     .k-peoples-parent,
     .img-child {
@@ -2125,7 +2119,6 @@ svg:nth-of-type(3):hover path {
         width: 112%;
     }
 }
-
 @media only screen and (min-width: 1200px) and (max-width: 1400px) {
     .k-peoples-parent,
     .img-child {
@@ -2173,7 +2166,6 @@ svg:nth-of-type(3):hover path {
         margin-top: 40px;
     }
 }
-/* Large devices (laptops/desktops, 1200px and up) */
 @media only screen and (min-width: 1401px) and (max-width: 1984px) and (max-height: 1024px) {
     #navbarOffcanvas {
         display: none;
