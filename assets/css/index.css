@@ -405,7 +405,7 @@
 }
 .text-stroke {
     color: var(--color-white);
-    animation: strokeEffect 3s ease-in-out infinite alternate;
+    animation: strokeEffect 1.8s ease-in-out infinite alternate;
 }
 
 @keyframes strokeEffect {
@@ -416,7 +416,7 @@
         color: var(--color-white);
     }
     100% {
-        color: var(--mrt-app-headline);
+        /* color: var(--mrt-app-headline); */color: var(--color-white);
     }
 }
 .everything-you-need {
